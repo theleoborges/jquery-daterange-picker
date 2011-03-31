@@ -47,7 +47,7 @@ $(function(){
 </code>
 </pre>
 
-Check examples in the demo directory or "on the project page":http://leonardoborges.github.com/jquery-daterange-picker/
+Check examples in the demo directory or "on the project page":http://leonardoborges.github.com/jquery-daterange-picker/demo/index.html
 
 h2. Build
 
