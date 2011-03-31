@@ -1,7 +1,6 @@
 h1. jquery-daterange-picker
 
-A small and simple utility built on top of "jQuery UI's datepicker":http://docs.jquery.com/UI/Datepicker that provides
-"validation" for date ranges.
+A small and simple utility built on top of "jQuery UI's datepicker":http://docs.jquery.com/UI/Datepicker that provides "validation" for date ranges.
 
 The quotes were used because the validation here means that once you select a 'from' date from the datepicker, all dates before that will
 be disabled in the 'to' datepicker, thus removing the need to actually present javascript validation errors.
@@ -10,23 +9,25 @@ h2. Usage
 
 Given a HTML snippet like the following:
 <pre>
+<code>
   <label for="fromDate">From:</label>
   <input id="fromDate" type="text"/>
   <label for="toDate">To:</label>
   <input id="toDate" type="text"/>
+</code>
 </pre>
 
 Initialize jquery-daterange-picker like so:
 <pre>
-  <script type="text/javascript">
-		$(function(){
-      $.daterangepicker({
-				fromSelector: "#fromDate",
-				toSelector: "#toDate",
-				readOnly:true //avoids manual user input
-			});
-		});
-	</script>
+<code>
+  $(function(){
+    $.daterangepicker({
+      fromSelector: "#fromDate",
+      toSelector: "#toDate",
+      readOnly:true //avoids manual user input
+    });
+  });
+</code>
 </pre>
 
 You can pass all options "jQuery UI's datepicker":http://docs.jquery.com/UI/Datepicker provides to jquery-daterange-picker.
@@ -34,16 +35,16 @@ It will take care of passing them along.
 
 It is sometimes useful to run callbacks after you have selected the dates. There are two special properties for that purpose, demonstrated below:
 <pre>
-  <script type="text/javascript">
-		$(function(){
-      $.daterangepicker({
-				fromSelector: "#fromDate",
-				toSelector: "#toDate",
-        onSelectFrom: function() {}, //These will be called after
-        onSelectTo: function() {}		 //each date has been selected
-			});
-		});
-	</script>
+<code>
+$(function(){
+  $.daterangepicker({
+    fromSelector: "#fromDate",
+    toSelector: "#toDate",
+    onSelectFrom: function() {}, //These will be called after
+    onSelectTo: function() {}		 //each date has been selected
+  });
+});
+</code>
 </pre>
 
 Check examples in the demo directory
