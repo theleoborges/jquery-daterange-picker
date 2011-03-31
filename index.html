@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jquery-daterange-picker</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="javascript,jquery,plugin" />
+    <meta name="description" content="jQuery plugin" />
+  </head>
+  <body>
+  <h1>jquery-daterange-picker</h1>
+
+  <p>A small and simple utility built on top of <a href="http://docs.jquery.com/UI/Datepicker">jQuery UI&#8217;s datepicker</a> that provides &#8220;validation&#8221; for date ranges.</p>
+
+  <p>The quotes were used because the validation here means that once you select a &#8216;from&#8217; date from the datepicker, all dates before that will<br />
+be disabled in the &#8216;to&#8217; datepicker, thus removing the need to actually present javascript validation errors.</p>
+
+  <h2>Usage</h2>
+
+  <p>Given a HTML snippet like the following:
+<pre>
+<code></p>
+  &lt;label for="fromDate"&gt;From:&lt;/label&gt;
+  &lt;input id="fromDate" type="text"/&gt;
+  &lt;label for="toDate"&gt;To:&lt;/label&gt;
+  &lt;input id="toDate" type="text"/&gt;
+</code>
+</pre>
+
+  <p>Initialize jquery-daterange-picker like so:
+<pre>
+<code></p>
+  $(function(){
+    $.daterangepicker({
+      fromSelector: "#fromDate",
+      toSelector: "#toDate",
+      readOnly:true //avoids manual user input
+    });
+  });
+</code>
+</pre>
+
+  <p>You can pass all options <a href="http://docs.jquery.com/UI/Datepicker">jQuery UI&#8217;s datepicker</a> provides to jquery-daterange-picker.<br />
+It will take care of passing them along.</p>
+
+  <p>It is sometimes useful to run callbacks after you have selected the dates. There are two special properties for that purpose, demonstrated below:
+<pre>
+<code>
+$(function(){</p>
+  $.daterangepicker({
+    fromSelector: "#fromDate",
+    toSelector: "#toDate",
+    onSelectFrom: function() {}, //These will be called after
+    onSelectTo: function() {} //each date has been selected
+  });
+});
+</code>
+</pre>
+
+  <p>Check out a <a href="demo/index.html">couple of examples</a>.</p>
+
+  <h2>Build</h2>
+
+  <p>A Rakefile is provided for generating the release into the dist directory. It includes a minified version.</p>
+
+  <h2>Dependencies</h2>
+
+  <ul>
+    <li><a href="https://github.com/documentcloud/closure-compiler">closure-compiler gem</a> for running the Rakefile</li>
+    <li><a href="http://docs.jquery.com/UI/Datepicker">jQuery UI&#8217;s datepicker</a> (tested on v1.8.11)</li>
+    <li><a href="http://jquery.com/">jQuery</a> (tested on v1.5.1)
+  </ul>
+
+  <h2>Contributing</h2>
+  <ul>
+    <li>Check out the latest master to make sure the feature hasn&#8217;t been implemented or the bug hasn&#8217;t been fixed yet</li>
+    <li>Check out the issue tracker to make sure someone already hasn&#8217;t requested it and/or contributed it</li>
+    <li>Fork the project</li>
+    <li>Start a feature/bugfix branch</li>
+    <li>Commit and push until you are happy with your contribution</li>
+    <li>Make sure to add tests for it. This is important so I don&#8217;t break it in a future version unintentionally.</li>
+    <li>Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+  </ul>
+
+  <h2>Copyright</h2>
+
+  <p>Copyright&#169; 2011- <a href="http://www.leonardoborges.com">Leonardo Borges</a> , released under the MIT license</p>
+
+
+     
+  </body>
+</html>
