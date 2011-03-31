@@ -1,4 +1,4 @@
-h2. jquery-daterange-picker
+h1. jquery-daterange-picker
 
 A small and simple utility built on top of "jQuery UI's datepicker":http://docs.jquery.com/UI/Datepicker that provides
 "validation" for date ranges.
@@ -6,7 +6,7 @@ A small and simple utility built on top of "jQuery UI's datepicker":http://docs.
 The quotes were used because the validation here means that once you select a 'from' date from the datepicker, all dates before that will
 be disabled in the 'to' datepicker, thus removing the need to actually present javascript validation errors.
 
-h3. Usage
+h2. Usage
 
 Given a HTML snippet like the following:
 <pre>
@@ -48,17 +48,17 @@ It is sometimes useful to run callbacks after you have selected the dates. There
 
 Check examples in the demo directory
 
-h3. Build
+h2. Build
 
 A Rakefile is provided for generating the release into the dist directory. It includes a minified version.
 
-h3. Dependencies
+h2. Dependencies
 
 * "closure-compiler gem":https://github.com/documentcloud/closure-compiler for running the Rakefile
 * "jQuery UI's datepicker":http://docs.jquery.com/UI/Datepicker (tested on v1.8.11)
 * "jQuery":http://jquery.com/ (tested on v1.5.1)
 
-h3. Contributing
+h2. Contributing
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -68,6 +68,6 @@ h3. Contributing
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-h3. Copyright
+h2. Copyright
 
 Copyright (c) 2011- "Leonardo Borges":http://www.leonardoborges.com , released under the MIT license
